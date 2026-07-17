@@ -103,19 +103,6 @@
             95%, 100% { background: none; }
         }
 
-        /* Lớp tối nhẹ toàn cảnh (mới thêm) - giảm sáng chung một chút, luôn hiện diện */
-        .dark-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.22);
-            mix-blend-mode: multiply;
-            pointer-events: none;
-            z-index: 20;
-        }
-
         /* ==================== 2. MẶT TRỜI VUÔNG & MẶT TRĂNG VUÔNG MINECRAFT ==================== */
         
         /* Mặt trời vuông xếp lớp nghệ thuật */
@@ -512,47 +499,63 @@
             90% { opacity: 0.95; }
             100% { transform: translateY(400px) translateX(70px) rotate(360deg); opacity: 0; }
         }
+    </style>
+</head>
+<body>
 
-        /* ==================== 5. AVATAR GÓC MÀN HÌNH (MỚI THÊM) ==================== */
-        .avatar-frame {
-            position: absolute;
-            top: 14px;
-            left: 14px;
-            width: 64px;
-            height: 64px;
-            z-index: 30;
-            border: 4px solid #2b1a0f;
-            outline: 2px solid #6b4a26;
-            background-color: #1a0f08;
-            box-shadow: 0 6px 14px rgba(0,0,0,0.6);
-        }
-        .avatar-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            image-rendering: pixelated;
-        }
-    
-        .music-control {
-            position: absolute;
-            top: 14px;
-            right: 14px;
-            z-index: 30;
-        }
-        .music-control button {
-            font-family: monospace;
-            font-size: 12px;
-            padding: 6px 10px;
-            background-color: #1a0f08;
-            color: #f0e6c8;
-            border: 3px solid #2b1a0f;
-            outline: 2px solid #6b4a26;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-        }
-        .music-control button:hover {
-            background-color: #2b1a0f;
-        }
-    
-        /* ===== Store / Addon sectionq
+    <div class="viewport">
+        <div class="ambient-glow"></div>
+        <div class="horizon-fog"></div>
+
+        <div class="cloud c1"></div>
+        <div class="cloud c2"></div>
+
+        <div class="sun-container">
+            <div class="sun-core"></div>
+        </div>
+
+        <div class="moon-container">
+            <div class="moon-core"></div>
+        </div>
+        
+        <div class="mountains-bg"></div>
+
+        <div class="smoke-box s1"></div>
+        <div class="smoke-box s2"></div>
+        <div class="smoke-box s3"></div>
+
+        <div class="ground-flat"></div>
+        <div class="fence-left"></div>
+        <div class="fence-right"></div>
+
+        <div class="fire-ember e1"></div>
+        <div class="fire-ember e2"></div>
+        <div class="fire-ember e3"></div>
+
+        <div class="campfire-glow"></div>
+        <div class="campfire-2d">
+            <div class="fire-wrapper">
+                <div class="fire-outer"></div>
+                <div class="fire-medium"></div>
+                <div class="fire-inner"></div>
+            </div>
+            <div class="campfire-wood"></div>
+            <div class="coal-glow"></div>
+        </div>
+
+        <div class="poppy">
+            <div class="poppy-stem"></div>
+            <div class="poppy-head"></div>
+        </div>
+
+        <div class="cherry-canopy-2d"></div>
+        <div class="oak-log-2d"></div>
+
+        <div class="cherry-petal-2d p1"></div>
+        <div class="cherry-petal-2d p2"></div>
+        <div class="cherry-petal-2d p3"></div>
+        <div class="cherry-petal-2d p4"></div>
+    </div>
+
+</body>
+</html>
